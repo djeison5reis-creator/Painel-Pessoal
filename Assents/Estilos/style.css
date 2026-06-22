@@ -1,0 +1,469 @@
+:root {
+    /*Texto*/
+    --color: #162938;
+    --color1: #fff;
+    --ascent: #ff0;
+    --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /*Fundos das Paginas*/
+    --fundo1: #fff;
+    --fundo2: #023052;
+    --fundo3: #0f1c25;
+    --fundo4: #188de0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;user-select: none;
+    outline: none;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    position: relative;
+    height: 100vh;background: #f6f6f6;
+    overflow-x: hidden;
+}
+
+header {
+    background: var(--fundo4);
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    left: 0;
+    z-index: 1000;
+    user-select: none;
+    right: 0;
+    top: 0;
+    transition: .3s ease;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+header.aniScroll {
+    border: 20px solid #f00;
+}
+
+.logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logoName {
+    display: grid;
+    place-items: center;
+    color: var(--color);
+    border: 1px solid var(--fundo1);background: var(--fundo1);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 40px;font-size: 1.7em;
+    width: 40px;
+    border-radius: 60px;
+}
+
+.logo h4 {
+    color: var(--color1);
+    font-size: 2em;
+    font-style: normal;
+}
+
+.logo h4 em {
+    font-style: normal;
+}
+
+.teo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    position: relative;
+    height: 40px;
+    width: 300px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;border-right: none;
+}
+
+.search input {
+    padding: 0px 40px 0px 10px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: var(--color);
+}
+
+.search input::-webkit-input-placeholder {
+    color: var(--color1);
+}
+
+.search button {
+    border: none;
+    border-radius: 50px;
+    background: var(--fundo1);
+    width: 37px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+}
+
+.menu-btn {
+    background: transparent;
+    color: var(--color1);
+    border: none;
+    font-size: 2.5em;
+    width: 30px;
+}
+
+/*icons-h*/
+.icons-h button {
+    background: transparent;
+    border: none;
+}
+
+.icons-h button i {
+    font-style: normal;
+    font-size: 1.2em;
+
+}
+
+.icons-h .relogio {
+    color: var(--color1);
+    font-size: 2em;
+}
+
+.MenuLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.MenuLinks a button {
+    border: none;
+    background: transparent;
+    color: var(--color);
+}
+
+
+/*======================== 
+Efeitos da Pagina
+============================*/
+/* ════════════════════════════════════════
+   CANVAS PARTICLES
+════════════════════════════════════════ */
+#canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .6;
+}
+
+/*=======================================
+Cursor
+======================*/
+#cursor {
+    position: fixed;
+    z-index: 1001;
+    padding: 3px;
+    opacity: 0;
+    background: var(--fundo1);
+    mix-blend-mode: difference;
+    height: 15px;
+    pointer-events: none;
+    width: 15px;
+    border-radius: 50%;
+}
+
+#r {
+    position: fixed;
+    z-index: 1001;
+    opacity: 0;
+    padding: 3px;
+    pointer-events: none;
+    border: 2px dashed var(--fundo1);
+    mix-blend-mode: difference;
+    height: 25px;
+    width: 25px;
+    animation: 15s infinite linear roleanimacao;
+    border-radius: 50%;
+}
+
+@keyframes roleanimacao {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*======================== 
+container
+============================*/
+.container {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    color: #000;background: var(--fundo1);
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.nav-Slider {
+    width: 180px;border-top: 1px solid var(--fundo1);
+    position: fixed;
+    left: -100%;
+    padding: 2em 1em 10px 2em;
+    background: var(--fundo4);
+    height: 90vh;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: .3s ease-in-out;
+}
+
+.nav-Slider.menuToglle {
+    left: 0;
+}
+
+.nav-Slider h1 {
+    margin: 20px 0 30px 0;
+    font-family: var(--font);color: var(--color1);
+    font-size: 2.3em;
+}
+
+.lang {
+    background: var(--fundo3);
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: var(--color1);
+    font-family: var(--font);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.subL {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.subL ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subL ul li {
+    width: 100%;
+    list-style: none;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.subL ul li a {
+    width: 100%;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.4em;
+    font-weight: 600;
+    border-radius: 50px;
+    padding: 8px;
+}
+
+.subL ul li a:hover {
+    border: 1px solid #000;
+}
+
+.subL ul li a:active,
+.subL ul li a:focus {
+    background: var(--fundo3);
+    color: var(--color1);
+}
+
+.cta-Lg ul li a:active,
+.cta-Lg ul li a:hover,
+.cta-Lg ul li a:focus {
+    border: none;
+}
+
+.cta-Lg ul li a:nth-child(1):active,
+.cta-Lg ul li a:nth-child(1):focus {
+    background: transparent;
+}
+
+.subL h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    font-family: var(--font);
+    color: var(--color1);
+}
+
+/*barra*/
+.barra {
+    height: 2px;
+    width: 70%;
+    background: linear-gradient(90deg, transparent, #0f1c25, transparent);
+    border-radius: 50%;
+}
+
+/*======================== 
+container + Section
+============================*/
+.Content section {
+    display: flex;
+    overflow-y: auto;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 4em 2em 0 2em;
+    gap: 30px;
+    flex-direction: column;
+}
+
+section .cards-cta {
+    padding: 2em;
+    border-radius: 10px;
+    max-width: 500px;
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards-cta .img {
+    position: relative;
+}
+
+.cards-cta .img img {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    box-shadow: 0 0 5px #000;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+
+.cards-cta .img img:hover {
+    transform: scale(.96);
+}
+
+.iconPerfil {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+      background: var(--fundo3);
+    padding: 10px;
+    border-radius: 50px;
+     box-shadow: 0 0 10px var(--fundo3);
+}
+
+.iconCog {
+    position: absolute;
+    right: 3%;
+    top: 20%;
+    background: var(--fundo3);
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px var(--fundo3);
+}
+
+.iconPerfil i,
+.iconCog i {
+    font-size: 1.3em;
+    color: var(--color1);
+}
+
+.cards-cta h1 {
+    font-size: 3em;
+    letter-spacing: 1.3px;
+    font-family: var(--font);
+    font-weight: 400;
+}
+
+.cards-cta p {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.btn-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.btn-section a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-section a i {
+    font-size: 3em;
+}
+
+.btn-section a p {
+    font-size: 1.2em;
+    font-family: var(--font);
+    color: var(--color);
+}
+/*==========================
+CardsInfo
+==============================*/
+.CardsInfo{
+    display: flex;align-items: center;
+    gap: 30px;border: 1px solid #eee;padding: 15px 10px;justify-content: space-between;
+    width: 250px;border-radius: 10px;
+}
+.CardsInfo h3{
+    font-size: 2em;margin-bottom: 20px;letter-spacing: 1.3px;
+}
+.CardsInfo p{
+  font-size: 1.3em;margin: 10px 0;
+}
+.CardsInfo p a{
+    font-size: 1.4em;
+}
+.CardsInfo i{
+    color: var(--color1);font-size: 4em;opacity: .8;
+}
+/*======================== 
+Animaçõoes das Paginas
+============================*/
+

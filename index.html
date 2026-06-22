@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernardo Reis || Painel de Controlo Pessoal</title>
+    <!-- Link do arquivo Css -->
+    <link rel="stylesheet" href="Assents/Estilos/style.css">
+    <!-- Link do cdn da Font Wesome -->
+    <link rel="stylesheet" href="Publico/fontawesome-free-7.2.0-web/css/all.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="teo">
+            <!-- Logo da Aplicação -->
+            <div class="logo">
+                <div class="logoName">BR</div>
+                <h4>Painel de <br> <em>Controlo</em></h4>
+
+            </div>
+            <!--  -->
+            <div style="display: flex;align-items: center;gap: 20px;">
+
+
+
+                <div class="search">
+                    <input type="text" placeholder="Busca...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div style="display: flex;align-items: center;gap: 10px;" class="icons-h">
+                    <button title="Relogio" class="relogio">00:00:00</button>
+                </div>
+                <button class="menu-btn" id="menuToggle">☰</button>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- Elemetos de Efeitos -->
+    <!-- Canvas -->
+    <canvas id="canvas"></canvas>
+    <!-- Cursor -->
+    <div id="cursor"></div>
+    <div id="r"></div>
+    <!--  -->
+    <!-- Container -->
+    <div class="container">
+        <!-- Menu Lateral -->
+        <div class="nav-Slider" id="NavBar">
+
+            <h1>Menu</h1>
+            <div class="subL">
+                <h2>Navegação</h2>
+                <ul>
+                    <li><a href="#" class="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-home"></i> Projetos</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-phone"></i> Contactos</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-home"></i> Plataformas</a></li>
+
+                </ul>
+            </div>
+            <div class="subL">
+                <h2>Empresa</h2>
+                <ul>
+                    <li><a href="#" class="#"><i class="fas fa-user"></i> Contrato</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-globe"></i> Graficos</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-user"></i> Equipa</a></li>
+
+                </ul>
+
+            </div><br><br>
+            <div class="subL">
+                <h2>UX</h2>
+                <ul>
+                    <li><a href="#" class="#"><i class="fas fa-home"></i> Personalização</a></li>
+
+                </ul>
+            </div>
+            <div class="subL">
+                <h2>Definições</h2>
+                <ul>
+                    <li><a href="#" class="#"><i class="fas fa-user"></i> Perfil</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-globe"></i> Segurança</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-globe"></i> Idioma</a></li>
+                    <li><a href="#" class="#"><i class="fas fa-globe"></i> Atalhos</a></li>
+
+                </ul>
+
+            </div><br>
+            <!-- Barras -->
+            <div class="#">
+                <div class="slid-barra" style="margin:20px 0 20px 0; display: grid;place-items: center;">
+                    <div class="barra"></div>
+                </div>
+                <div class="lang" class="#"><i class="fas fa-globe"></i> Idioma Português</div>
+
+            </div>
+            <!-- Links Log out -->
+            <div class="subL cta-Lg" style="margin-top: 4em;">
+                <h2>Sessões</h2>
+                <ul>
+                    <li style="border: 1px solid #f00; border-radius: 50px;text-align: center;"><a style="color: #f00;"
+                            class="#" href="#"><i class="fas fa-house"></i> Sair</a></li>
+                    <li style="background:#f00;text-align: center; border-radius: 50px;"><a style="color: #fff;"
+                            class="#" href="#"><i class="fas fa-house"></i> Terminar sessão</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+        <!-- Main -->
+        <main id="Container" class="Content">
+            <div class="#">
+                <section class="inicio">
+                    <!-- Cards de Estatisticas -->
+                   
+                   <div style="background: var(--fundo3); max-width: 100;padding: 10px;border-radius: 10px;
+                   box-shadow: 0 0 5px var(--fundo3);display: flex;
+                    align-items: center;justify-content: center;">
+                        
+                        <div class="grads-cards" style="border: 1px solid #fff;display: flex;color: #fff;width: 100%;gap: 30px;padding: 20px;
+                         justify-content: space-between;">
+                            <div class="CardsInfo" >
+                                <div class="">
+                                    <h3>Equipa</h3>
+                                    <p>Membros:
+                                    <a class="n">50</a>
+                                    </p>
+                                </div>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="CardsInfo">
+                                <div class="">
+                                    <h3>Equipa</h3>
+                                    <p>Membros:
+                                    <a class="n">50</a>
+                                    </p>
+                                </div>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="CardsInfo">
+                                <div class="">
+                                    <h3>Equipa</h3>
+                                    <p>Membros:
+                                    <a class="n">50</a>
+                                    </p>
+                                </div>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="CardsInfo">
+                                <div class="">
+                                    <h3>Equipa</h3>
+                                    <p>Membros:
+                                    <a class="n">50</a>
+                                    </p>
+                                </div>
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="cards-cta">
+                        <div class="img"><img
+                                src="e:\Landing page\Publico\IMG\backgroud LOGOTIPO da Light Storm (1).png" alt="">
+                            <div class="iconPerfil ic"> <i class="fas fa-edit"></i></div>
+                            <div class="iconCog ic"> <i class="fas fa-cog"></i></div>
+                        </div>
+                        <h1>Bernardo_Reis</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt fugit non qui suscipit!
+                            Commodi vitae aspernatur quos! Minus voluptatem est odit amet distinctio doloremque suscipit
+                            totam rerum, sequi ipsum iste tenetur, magnam cumque reiciendis iusto deserunt esse corporis
+                            quod voluptates reprehenderit iure! Temporibus architecto itaque officiis, mollitia dolor
+                            officia velit?</p>
+                        <div class="btn-section">
+                            <a href="#"><i style="color: #000;" class="fab fa-github"></i>
+                                <p>Github</p>
+                            </a>
+                            <a href="#"><i style="color: #029aff;" class="fab fa-facebook"></i>
+                                <p>Facebook</p>
+                            </a>
+                            <a href="#"><i style="color: #0230ff;" class="fab fa-linkedin"></i>
+                                <p>Linkedin</p>
+                            </a>
+                        </div>
+                    </div>
+                    <br><br>
+               
+                </section>
+                <section class="projetos" style="display: none;">
+                    <h1>Projectos</h1>
+                </section>
+                <section style="display: none;">
+                    <h1>Contactos</h1>
+                </section>
+
+            </div>
+            <div class="cta-painel">
+                <!-- Paine de Boas Vindas -->
+                <div class="newslatter" style="display: none;">
+                    <h2>Bem Vindo Bernardo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem quae vitae
+                        officia aut maiores doloribus nihil consequatur eaque, fuga dolorem possimus eius modi? Facilis
+                        lorem60 amet nobis velit assumenda eligendi.</p>
+
+                </div>
+            </div>
+
+            <footer
+                style="padding: 20px;
+            display: flex;align-items: center;justify-content: space-between;background: var(--fundo3);border-top: 1px solid #eee;">
+                <div style="display: flex;align-items: center;gap: 10px;">
+                    <div class="logoName" style="border: none; background: #fff;color: #162938;">BR</div>
+                    <p style="color: #fff; font-size: 1.3em; letter-spacing: 1.2px;">Bernardo Lieva <br>Cinco Reis</p>
+
+                </div>
+                <div class="redes-f" style="display: flex;align-items: center;gap: 10px;color: #fff;">
+                    <p style="font-size: 1.3em; letter-spacing: 1.2px;"> Todos os direitos reservados</p>
+                    <i style="font-size: 1.3em;" class="fab fa-whatsapp"></i>
+                    <i style="font-size: 1.3em;" class="fab fa-google"></i>
+                    <i style="font-size: 1.3em;" class="fab fa-facebook"></i>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+
+
+
+
+    <!-- Script Da Aplicação -->
+    <script src="Assents/App/script.js"></script>
+</body>
+
+</html>
